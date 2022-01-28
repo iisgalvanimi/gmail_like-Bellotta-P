@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'email-Bellotta';
+  Email : string = "";
+  estratto : string = "";
+  vett_Email_Oggetto : string[] = [];
+  registrazione(Email : HTMLInputElement,Oggetto : HTMLInputElement ){
+    console.log(Email.value, Oggetto.value)
+    this.estratto = (Email.value) + " " + (Oggetto.value)
+  }
 }
