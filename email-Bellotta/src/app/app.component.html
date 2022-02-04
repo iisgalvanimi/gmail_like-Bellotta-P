@@ -1,5 +1,6 @@
 <br><br>
 <div class="container">
+  
   <form class="jumbotron">
       <div class="form-group">
         <input type="text" #textEmail><label>Insert the email</label> 
@@ -7,6 +8,9 @@
       <div class="form-group">
         <input type="text" #textObject><label>Insert the email object</label>
       </div>
-      <button (click) = "registrazione(textEmail, textObject)"> Invia </button>
+      <div class="form-group">
+        <input type="text" #textContext><label>Inserisci il testo all'interno </label>
+      </div>
+      <button class="btn-orange" (click) = "registrazione(textEmail, textObject, textContext)"> Invia </button>
   </form>
 </div>

@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   Email : string = "";
   estratto : string = "";
+  Testo : string = "";
   vett_Email_Oggetto : string[] = [];
-  registrazione(Email : HTMLInputElement,Oggetto : HTMLInputElement ){
-    console.log(Email.value, Oggetto.value)
+  registrazione(Email : HTMLInputElement, Testo : HTMLInputElement,  Oggetto : HTMLInputElement ){
+    console.log(Email.value, Oggetto.value, Testo.value)
     this.estratto = (Email.value) + " " + (Oggetto.value)
   }
 }
