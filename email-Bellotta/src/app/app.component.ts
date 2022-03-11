@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Email } from 'src/models/email.model';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  Email : string = "";
+  email : string = "";
   estratto : string = "";
-  Testo : string = "";
-  vett_Email_Oggetto : string[] = [];
-  registrazione(Email : HTMLInputElement, Testo : HTMLInputElement,  Oggetto : HTMLInputElement ){
-    console.log(Email.value, Oggetto.value, Testo.value)
-    this.estratto = (Email.value) + " " + (Oggetto.value)
+  testo : string = "";
+  vett_Email_Oggetto : Email[] = [];
+
+  registrazione(email : HTMLInputElement, testo : HTMLInputElement,  oggetto : HTMLInputElement ) : boolean{
+    console.log(email.value, oggetto.value, testo.value);
+    let e = new Email(email.value, oggetto.value, testo.value);
+    this.vett_Email_Oggetto.push(e);
+    console.log(this.vett_Email_Oggetto);
+
+    return false;
   }
 }
+
+LINK PER FINIRE TUTTI I PUNTI
+https://w3schools.com/cssref/pr_class_visibility.asp
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_visibility
+https://stackoverflow.com/questions/35269179/angular-conditional-class-with-ngclass

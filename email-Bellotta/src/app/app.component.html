@@ -14,3 +14,7 @@
       <button class="btn-orange" (click) = "registrazione(textEmail, textObject, textContext)"> Invia </button>
   </form>
 </div>
+
+<div class="container">
+  <app-sent-email *ngFor="let email of vett_Email_Oggetto" [inputEmail]="email"></app-sent-email>
+</div>
